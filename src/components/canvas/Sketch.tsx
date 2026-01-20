@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import * as PIXI from 'pixi.js';
 import Matter from 'matter-js';
-import { GlitchFilter } from 'pixi-filters';
+
 import { STREAM_KEYWORDS, COLORS } from '../../lib/constants';
 
 // --- CONFIG ---
@@ -24,7 +24,7 @@ const Sketch = ({ onKeywordSelect }: SketchProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const appRef = useRef<PIXI.Application | null>(null);
     const engineRef = useRef<Matter.Engine | null>(null);
-    const glitchRef = useRef<GlitchFilter | null>(null);
+
 
     useEffect(() => {
         if (!containerRef.current) return;
